@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacApplication", "Autof
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{1FA9A563-F354-49C3-952C-FF79E476D8F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{770BEAD7-BC4F-4CDB-A980-9E0FF67496EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{3598B411-1208-48C3-93C4-DC5A16E7BF53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{1FA9A563-F354-49C3-952C-FF79E476D8F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FA9A563-F354-49C3-952C-FF79E476D8F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FA9A563-F354-49C3-952C-FF79E476D8F8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{770BEAD7-BC4F-4CDB-A980-9E0FF67496EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{770BEAD7-BC4F-4CDB-A980-9E0FF67496EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{770BEAD7-BC4F-4CDB-A980-9E0FF67496EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{770BEAD7-BC4F-4CDB-A980-9E0FF67496EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3598B411-1208-48C3-93C4-DC5A16E7BF53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3598B411-1208-48C3-93C4-DC5A16E7BF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3598B411-1208-48C3-93C4-DC5A16E7BF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3598B411-1208-48C3-93C4-DC5A16E7BF53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
