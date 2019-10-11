@@ -14,19 +14,32 @@ namespace AutofacApplication
 
             Console.WriteLine("輸入計算方式，ex:1+1");
 
-            // 取得 註冊好組件的 Autofac Container
-            var container = ContainerConfig.Congigure();
-
-            // Container 解析 計算機介面，取得註冊的 BasicCalculatorService
-            var calculator = container.Resolve<ICalculatorService>();
-
-            // 執行計算方法
-            var calcResult = calculator.Calculate(Console.ReadLine());
+            // 執行計算方法，回傳執行結果
+            var calcResult = GetResult(Console.ReadLine());
 
             // 顯示執行結果
             Console.WriteLine($"執行結果為: {calcResult}");
 
             Console.ReadLine();
+        }
+
+        /// <summary>
+        /// 透過 子生命周期，解析組件，並取得計算結果
+        /// </summary>
+        /// <param name="inputStr"></param>
+        /// <returns></returns>
+        private static string GetResult(string inputStr)
+        {
+            // 取得 註冊好組件的 Autofac Container
+            // 創建子生命周期，解析組件
+            using (var scope = ContainerConfig.Congigure().BeginLifetimeScope())
+            {
+                // 解析組件
+                var calculator = scope.Resolve<ICalculatorService>();
+
+                // 回傳執行結果
+                return calculator.Calculate(inputStr);
+            }
         }
     }
 }
