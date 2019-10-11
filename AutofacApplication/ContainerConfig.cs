@@ -11,10 +11,13 @@ namespace AutofacApplication
     {
         public static IContainer Congigure()
         {
+            // 建立 ContainerBuilder 用來註冊 Component 及 Service
             var builder = new ContainerBuilder();
 
+            // 註冊 Component(類別)、對應的 Service(介面)
             builder.RegisterType<BasicCalculatorService>().As<ICalculatorService>();
 
+            // 回傳 Container
             return builder.Build();
         }
     }
