@@ -1,5 +1,8 @@
 ﻿using Services;
 using System;
+// 引用參考
+using Autofac;
+using Interfaces;
 
 namespace AutofacApplication
 {
@@ -11,10 +14,13 @@ namespace AutofacApplication
 
             Console.WriteLine("輸入計算方式，ex:1+1");
 
-            // 實體化 BasicCalculatorService 類別
-            var calculator = new BasicCalculatorService();
+            // 取得 註冊好組件的 Autofac Container
+            var container = ContainerConfig.Congigure();
 
-            // 使用計算方法並取得結果
+            // Container 解析 計算機介面，取得註冊的 BasicCalculatorService
+            var calculator = container.Resolve<ICalculatorService>();
+
+            // 執行計算方法
             var calcResult = calculator.Calculate(Console.ReadLine());
 
             // 顯示執行結果
