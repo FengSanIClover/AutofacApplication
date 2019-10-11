@@ -13,9 +13,12 @@ namespace Services
         /// </summary>
         /// <param name="inputStr">輸入的算式</param>
         /// <returns></returns>
-        public int Calculate(string inputStr)
+        public string Calculate(string inputStr)
         {
-            return 0;
+            // 取得運算符號的位置
+            var symbolIndex = this.GetSymbolIndex(inputStr);
+
+            return "";
         }
     }
 }

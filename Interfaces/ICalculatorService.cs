@@ -14,6 +14,6 @@ namespace Interfaces
         /// </summary>
         /// <param name="inputStr">輸入的算式</param>
         /// <returns></returns>
-        int Calculate(string inputStr);
+        string Calculate(string inputStr);
     }
 }
